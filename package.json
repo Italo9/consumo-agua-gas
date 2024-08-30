@@ -2,16 +2,36 @@
   "name": "consumo-agua-gas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "migrate": "PGHOST=db PGUSER=postgres PGDATABASE=consumo_agua_gas PGPASSWORD=123456 PGPORT=5432 node-pg-migrate up",
+    "dev": "ts-node src/app.ts",
+    "migrate:down": "node-pg-migrate down",
+    "migrate:create": "node-pg-migrate create",
+    "migrate:status": "node-pg-migrate status"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.12",
     "@types/node": "^22.5.0",
+    "@types/pg": "^8.11.6",
+    "@types/uuid": "^10.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.17.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "n": "^9.2.3",
+    "node-pg-migrate": "^7.6.1",
+    "pg": "^8.12.0",
+    "uuid": "^10.0.0"
   }
 }
