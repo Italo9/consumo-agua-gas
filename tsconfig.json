@@ -1,33 +1,24 @@
 {
   "compilerOptions": {
-    /* Básico */
-    "target": "es6",                              // Defina a versão do ECMAScript para a qual o TypeScript deve compilar
-    "module": "commonjs",                         // Sistema de módulo, comum para Node.js
-    "lib": ["es6"],                               // Inclui as declarações de bibliotecas padrão do ECMAScript 6
-    "outDir": "./dist",                           // Diretório de saída para arquivos compilados
-    "rootDir": "./src",                           // Diretório raiz do código TypeScript
-    
-    /* Estrita */
-    "strict": true,                               // Ativa todas as verificações estritas
-    "noImplicitAny": true,                        // Levanta erro quando um valor tem `any` implicitamente
-    "strictNullChecks": true,                     // Garante que valores `null` e `undefined` são tratados separadamente
-    
-    /* Melhoria de código */
-    "esModuleInterop": true,                      // Permite a interoperabilidade de módulos ES6 com CommonJS
-    "forceConsistentCasingInFileNames": true,     // Garante consistência no uso de maiúsculas/minúsculas nos nomes de arquivos
-    "skipLibCheck": true,                         // Pula a checagem de tipos dos arquivos de declaração das bibliotecas
-    
-    /* Debug e Source Maps */
-    "sourceMap": true,                            // Gera arquivos de source maps para ajudar no debug
-    
-    /* Configuração opcional */
-    "resolveJsonModule": true,                    // Permite a importação de arquivos JSON
-    "baseUrl": "./",                              // Base URL para resolver módulos relativos
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "outDir": "./dist",
+    "rootDir": "./src", 
+    "strict": true,   
+    "noImplicitAny": true,  
+    "strictNullChecks": true,     
+    "esModuleInterop": true,    
+    "forceConsistentCasingInFileNames": true,    
+    "skipLibCheck": true,      
+    "sourceMap": true,
+    "resolveJsonModule": true, 
+    "baseUrl": "./", 
     "paths": {
-      "@models/*": ["src/models/*"],              // Alias para facilitar importações
+      "@models/*": ["src/models/*"], 
       "@controllers/*": ["src/controllers/*"]
     }
   },
-  "include": ["src/**/*"],                        // Incluir todos os arquivos TypeScript na pasta src
-  "exclude": ["node_modules", "**/*.spec.ts"]     // Excluir node_modules e arquivos de teste
+  "include": ["src/**/*"],  
+  "exclude": ["node_modules", "**/*.spec.ts"]   
 }
